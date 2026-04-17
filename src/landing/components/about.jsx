@@ -63,7 +63,11 @@ export default function About() {
             </li>
           </ul>
           <div className="about__inner-foot">
-            <a href="#" className="button secondary">
+            <a
+              href="https://verais-organization.gitbook.io/verai"
+              target="_blank"
+              className="button secondary"
+            >
               Learn more
               {arrowRight}
             </a>

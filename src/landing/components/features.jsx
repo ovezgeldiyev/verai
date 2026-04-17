@@ -68,7 +68,7 @@ export default function Features() {
               </li>
             </ul>
             <div className="features__inner-foot">
-              <a href="#" className="button secondary">
+              <a href="https://verais-organization.gitbook.io/verai" target="_blank" className="button secondary">
                 Explore Advantage
                 {arrowRight}
               </a>

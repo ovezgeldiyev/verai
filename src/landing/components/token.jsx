@@ -6,7 +6,7 @@ import {
   processIcon,
   systemIcon,
 } from "base/SVG";
-
+import green from "assets/images/green.png";
 export default function Token() {
   return (
     <section className="about sm">
@@ -52,10 +52,17 @@ export default function Token() {
             </li>
           </ul>
           <div className="about__inner-foot">
-            <a href="#" className="button secondary">
+            <a
+              href="https://verais-organization.gitbook.io/verai/tokenomics/editor"
+              target="_blank"
+              className="button secondary"
+            >
               Full Tokenomics
               {arrowRight}
             </a>
+          </div>
+          <div className="about__inner-shape">
+            <img src={green} alt="green" />
           </div>
         </div>
       </div>

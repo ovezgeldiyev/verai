@@ -13,7 +13,9 @@ export default function Roles() {
           <div className="roles__inner-content">
             <div className="roles__inner-title">
               <h6>Roles in the VerAI Ecosystem</h6>
-              <h2>Contributors vs. <br /> Developers</h2>
+              <h2>
+                Contributors vs. <br /> Developers
+              </h2>
             </div>
             <div className="roles__inner-text">
               <p className="sm">
@@ -37,13 +39,25 @@ export default function Roles() {
               </p>
             </div>
             <div className="roles__inner-foot">
-              <a href="#" className="button primary">
+              <a
+                href="https://forms.gle/z1L3PcJkTTELpWJ9A"
+                target="_blank"
+                className="button primary"
+              >
                 Join as a Contributor
               </a>
-              <a href="#" className="button solid">
+              <a
+                href="https://forms.gle/C7B7yCbUNydHoj7N7"
+                target="_blank"
+                className="button solid"
+              >
                 Join as a Developers
               </a>
-              <a href="#" className="explore">
+              <a
+                href="https://verais-organization.gitbook.io/verai"
+                target="_blank"
+                className="explore"
+              >
                 Explore WP
                 {arrowRight}
               </a>

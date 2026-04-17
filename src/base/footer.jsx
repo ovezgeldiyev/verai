@@ -21,15 +21,24 @@ export default function Footer() {
                 to accelerate AI training, share resources, and Earn Rewards.
               </p>
               <div className="footerInfo__social">
-                <a href="#">{twitter}</a>
-                <a href="#">{telegram}</a>
+                <a href="https://x.com/VerAI_Agents" target="_blank">
+                  {twitter}
+                </a>
+                <a href="https://t.me/VerAIIntelligence" target="_blank">
+                  {telegram}
+                </a>
               </div>
             </div>
             <div className="footer__inner-links">
               <a href="#product">Product</a>
               <a href="#features">Features</a>
               <a href="#agents">AI Agents</a>
-              <a href="#docs">Docs</a>
+              <a
+                href="https://verais-organization.gitbook.io/verai"
+                target="_blank"
+              >
+                Docs
+              </a>
             </div>
           </div>
           <div className="footer__inner-copy">

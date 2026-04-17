@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import logo from "assets/images/logo.png";
 import { telegram, twitter } from "./SVG";
 import { useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Modal from "./modal";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
@@ -52,51 +54,78 @@ export default function Header() {
     window.addEventListener("scroll", windowScroll);
     return () => window.removeEventListener("scroll", windowScroll);
   }, []);
+  const [modal, setModal] = useState(false);
+  const closeFunc = (e) => {
+    if (e.currentTarget === e.target) setModal(false);
+  };
   return (
-    <header className={"header " + (isSticky ? "sticky" : "")} id="header">
-      <div className="auto__container">
-        <div className="header__inner">
-          <a href="#home" className="header__inner-logo anchorLinks">
-            <img src={logo} alt="" />
-          </a>
-          <nav className={"nav " + (menu ? "active" : "")} onClick={close}>
-            <div className="nav__inner">
-              <ul className="nav__inner-links">
-                <li>
-                  <a href="#product" className="anchorLinks">Product</a>
-                </li>
-                <li>
-                  <a href="#features" className="anchorLinks">Features</a>
-                </li>
-                <li>
-                  <a href="#agents" className="anchorLinks">AI Agents</a>
-                </li>
-                <li>
-                  <a href="#">Docs</a>
-                </li>
-              </ul>
-              <div className="nav__inner-buttons">
-                <a href="#" className="button uniq">
-                  <span>LAUNCH APP</span>
-                </a>
-                <div className="nav__inner-social">
-                  <a href="#">{twitter}</a>
-                  <a href="#">{telegram}</a>
+    <>
+      <header className={"header " + (isSticky ? "sticky" : "")} id="header">
+        <div className="auto__container">
+          <div className="header__inner">
+            <a href="#home" className="header__inner-logo anchorLinks">
+              <img src={logo} alt="" />
+            </a>
+            <nav className={"nav " + (menu ? "active" : "")} onClick={close}>
+              <div className="nav__inner">
+                <ul className="nav__inner-links">
+                  <li>
+                    <a href="#product" className="anchorLinks">
+                      Product
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#features" className="anchorLinks">
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#agents" className="anchorLinks">
+                      AI Agents
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://verais-organization.gitbook.io/verai"
+                      target="_blank"
+                    >
+                      Docs
+                    </a>
+                  </li>
+                </ul>
+                <div className="nav__inner-buttons">
+                  <button
+                    className="button uniq"
+                    onClick={() => setModal(!modal)}
+                  >
+                    <span>LAUNCH APP</span>
+                  </button>
+                  <div className="nav__inner-social">
+                    <a href="https://x.com/VerAI_Agents" target="_blank">
+                      {twitter}
+                    </a>
+                    <a href="https://t.me/VerAIIntelligence" target="_blank">
+                      {telegram}
+                    </a>
+                  </div>
                 </div>
               </div>
+            </nav>
+            <div
+              className={"burger " + (menu ? "active" : "")}
+              id="menuBtn"
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            >
+              <span></span>
             </div>
-          </nav>
-          <div
-            className={"burger " + (menu ? "active" : "")}
-            id="menuBtn"
-            onClick={() => {
-              setMenu(!menu);
-            }}
-          >
-            <span></span>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <AnimatePresence>
+        {modal && <Modal closeFunc={closeFunc} />}
+      </AnimatePresence>
+    </>
   );
 }

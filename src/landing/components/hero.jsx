@@ -21,14 +21,14 @@ export default function Hero() {
             </p>
           </div>
           <div className="hero__inner-buttons">
-            <a href="#" className="button primary">
+            <a href="https://forms.gle/z1L3PcJkTTELpWJ9A" target="_blank" className="button primary">
               Join as a Contributor
             </a>
-            <a href="#" className="button solid">
+            <a href="https://forms.gle/C7B7yCbUNydHoj7N7" target="_blank" className="button solid">
               Join as a Developers
             </a>
           </div>
-          <a href="#" className="explore">
+          <a href="https://verais-organization.gitbook.io/verai" target="_blank" className="explore">
             Explore WP
             {arrowRight}
           </a>

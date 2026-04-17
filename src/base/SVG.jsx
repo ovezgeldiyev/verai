@@ -64,3 +64,11 @@ export const outputsIcon = (
     />
   </svg>
 );
+export const closeIcon = (
+  <svg viewBox="0 0 22 22" fill="none">
+    <path
+      d="M3.30001 0L11 7.69999L18.7 6.89056e-05L22 3.30008L14.3 11L22 18.7001L18.7001 22.0001L11 14.3L3.30001 22.0001L0 18.7L7.70006 11L7.02307e-05 3.30001L3.30001 0Z"
+      fill="currentColor"
+    />
+  </svg>
+);

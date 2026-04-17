@@ -631,6 +631,21 @@
     }
   }
   &__inner {
+    position: relative;
+    z-index: 1;
+    &-shape {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      img {
+        width: 100%;
+      }
+    }
     &-title {
       margin-bottom: 64px;
       h6 {
@@ -973,6 +988,14 @@
         width: 100%;
         justify-content: center;
         margin-top: 10px;
+      }
+    }
+  }
+  .about {
+    &__inner {
+      &-shape {
+        right: -150px;
+        opacity: 0.5;
       }
     }
   }

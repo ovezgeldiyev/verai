@@ -49,7 +49,7 @@ export default function Agents() {
               </li>
             </ul>
             <div className="features__inner-foot">
-              <a href="#" className="button secondary">
+              <a href="https://verais-organization.gitbook.io/verai" target="_blank" className="button secondary">
                 Whitepaper
                 {arrowRight}
               </a>
